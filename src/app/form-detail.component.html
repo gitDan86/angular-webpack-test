@@ -1,0 +1,14 @@
+<div *ngIf="form">
+    <h2>{{form.qmaDetails.allocationNumber}} details!</h2>
+    <div>
+        <label>id: </label>{{form.id}}
+    </div>
+    <div>
+        <label for="allocationNumber">QMAN number: </label>
+        <input [(ngModel)]="form.qmaDetails.allocationNumber" placeholder="allocation number">
+    </div>
+    <div>
+        <label for="expiryDate">Expiry date: </label>
+        <input type="date" [(ngModel)]="form.qmaDetails.expiryDate">
+    </div>
+</div>

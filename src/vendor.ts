@@ -10,4 +10,5 @@ import '@angular/router';
 import 'rxjs';
 
 // Other vendors for example jQuery, Lodash or Bootstrap
+import 'angular-in-memory-web-api';
 // You can import js, ts, css, sass, ...

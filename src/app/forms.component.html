@@ -1,0 +1,24 @@
+<div class="content-wrapper row">
+  <div class="content__navigation col-md-3">
+    <div class="content__navigation-title">
+      <h2 class="content__navigation-title--text">
+        <a href="" class="content__navigation-title--link">My forms</a>
+      </h2>
+    </div>
+    <div class="content__navigation-links">
+      <ul class="content__navigation-list">
+        <li *ngFor="let form of forms" (click)="onSelect(form)" class="content__navigation-list-item">
+          <a [routerLink]="['/form', form.id]" class="content__navigation-list-link" [class.active--content-nav]="form === selectedForm"><span class="form">{{form.qmaDetails.type}}</span> {{form.qmaDetails.allocationNumber}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content__main col-md-6">
+    <form-detail [form]="selectedForm"></form-detail>
+  </div>
+
+  <div class="aside col-md-3">
+    <img src="../assets/images/angular.png">
+  </div>
+</div>
